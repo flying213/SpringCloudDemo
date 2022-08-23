@@ -40,14 +40,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.20</version>
-            <!-- 子工程写了版本号，就使用子工程的版本号，如果没写版本,找父工程中规定的版本号 -->
-        </dependency>
-        <!-- 热部署 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -62,9 +54,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
-        <!--引用自己定义的api通用包，可以使用Payment支付Entity-->
         <dependency>
             <groupId>org.enn.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>

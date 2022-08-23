@@ -16,7 +16,7 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
-    @PostMapping(value = "/payment/create")
+    @PostMapping(value = "/paymentZK/create")
     public CommonResult create(@RequestBody Payment payment){// @RequestBody 將json封装成对象，不然post请求是根据表单提交的
         int result = paymentService.create(payment);
         if (result>0){
@@ -27,7 +27,7 @@ public class PaymentController {
 
     }
 
-    @GetMapping(value = "/payment/get/{id}")
+    @GetMapping(value = "/paymentZK/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id){
         Payment payment = paymentService.getPaymentById(id);
         if (payment != null){
